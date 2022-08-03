@@ -1,0 +1,19 @@
+html, #root{
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+body{
+  height: 90vh;
+  background: rgb(145,34,195);
+  background: linear-gradient(0deg, rgba(145,34,195,1) 0%, rgba(229,18,255,1) 100%);
+}
+
+
+
+
+
+
+
+
+

@@ -48,7 +48,7 @@ function Card(props) {
                   <div className="m-0 text">{desc}</div>
                 </div>
               )}
-              <div>{datum}</div>
+              <div className="mx-4 fw-bold">{datum}</div>
           </div>
       )
     

@@ -17,8 +17,8 @@ const Input = styled.input`
   outline: none;
   background: rgb(246, 246, 255);
   margin-bottom: 5px;
-  height: 100%
 `
+
 
 const Button = styled.button`
   border: none;
@@ -32,7 +32,7 @@ const Button = styled.button`
 `
 
 const completedStyle = {
-    "background" : 'green'
+    "background" : '#4beba1'
   }
   const DivTodo = styled.div`
     width: 500px;

@@ -6,10 +6,7 @@ import Form from './components/form';
 import Card from './components/card';
 import Button from './components/button';
 import {completedStyle, AddButtonstylePosition, AddButtonStyle} from './styledComponents/StyledComponent';
-import Navbar from './components/navbar';
-import { Home } from './components/Home';
-import { Archive } from './components/archive';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {DivTodo} from './styledComponents/StyledComponent'
 
 
 
@@ -114,18 +111,8 @@ function App() {
     setItems(foundCompletedItem)
   }
 return (
-    <div className='d-flex flex-column align-items-center mt-5'>
-      
-      
-      <BrowserRouter>
-        <Routes>
-          <Route path='/'  element={<Navbar />}>
-            <Route path='archive' element={<Archive />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      
-      
+  <div className='d-flex flex-column align-items-center mt-5'>
+      <DivTodo>TODO </DivTodo>
       {width <= 425 ? (
         <AddButtonstylePosition onClick={() => setShowForm(!showForm)}>
           <AddButtonStyle></AddButtonStyle>
@@ -140,7 +127,7 @@ return (
         />
         )}
 
-      {showForm ? (
+      {showForm && width <= 425 ? (
         <Form 
         submit={(e) =>addItem(e)}
         change={changeHandle}

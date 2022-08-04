@@ -5,11 +5,12 @@ import React, { useState, useEffect } from "react"
 import Form from './components/form';
 import Card from './components/card';
 import Button from './components/button';
-import {completedStyle, DivTodo, AddButtonstylePosition, AddButtonStyle} from './styledComponents/StyledComponent';
-import { Home } from "./components/Home";
+import {completedStyle, AddButtonstylePosition, AddButtonStyle} from './styledComponents/StyledComponent';
 import Navbar from './components/navbar';
-import { Archive } from "./components/archive";
+import { Home } from './components/Home';
+import { Archive } from './components/archive';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 
 
@@ -115,15 +116,16 @@ function App() {
 return (
     <div className='d-flex flex-column align-items-center mt-5'>
       
-
+      
       <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Navbar />}>
-              <Route path="home" element={<Home />} />
-              <Route path="archive" element={<Archive />} />
-            </Route>
+          <Route path='/'  element={<Navbar />}>
+            <Route index element={<Home />} />
+            <Route path='archive' element={<Archive />} />
+          </Route>
         </Routes>
       </BrowserRouter>
+      
       
       {width <= 425 ? (
         <AddButtonstylePosition onClick={() => setShowForm(!showForm)}>

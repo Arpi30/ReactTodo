@@ -120,7 +120,6 @@ return (
       <BrowserRouter>
         <Routes>
           <Route path='/'  element={<Navbar />}>
-            <Route index element={<Home />} />
             <Route path='archive' element={<Archive />} />
           </Route>
         </Routes>

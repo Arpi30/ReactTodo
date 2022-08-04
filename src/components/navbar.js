@@ -9,10 +9,10 @@ export function Navbar() {
         <div>
 
             <nav>
-                <DivTodo>TODO</DivTodo>
+                
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/"><DivTodo>TODO</DivTodo></Link>
                     </li>
                     <li>
                         <Link to= 'archive' >Archive</Link>
